@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BrightSmile Dental Clinic</title>
+
+<meta name="description" content="BrightSmile Dental Clinic provides modern, comfortable and professional dental care for the whole family.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17202a;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --primary: #087f8c;
+    --primary-dark: #05636d;
+    --light: #eaf9fa;
+    --dark: #102a43;
+    --text: #52606d;
+    --white: #ffffff;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e8eef1;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+nav a {
+    text-decoration: none;
+    color: #34495e;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.nav-btn {
+    background: var(--primary);
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 25px 80px;
+    background:
+        linear-gradient(110deg, rgba(234,249,250,0.96), rgba(255,255,255,0.85)),
+        url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    background: white;
+    color: var(--primary);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.05;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    max-width: 600px;
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 10px 25px rgba(8,127,140,0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.hero-card {
+    background: rgba(255,255,255,0.92);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 25px 70px rgba(16,42,67,0.15);
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.rating {
+    color: #f4b400;
+    font-weight: bold;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* GENERAL */
+
+section {
+    padding: 100px 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: var(--dark);
+    margin: 8px 0 12px;
+}
+
+.section-title p {
+    color: var(--text);
+    max-width: 650px;
+    margin: auto;
+}
+
+/* SERVICES */
+
+.services {
+    background: #f7fbfc;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 28px;
+    border-radius: 20px;
+    border: 1px solid #e8eef1;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text);
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.about-content h2 {
+    font-size: 42px;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.check {
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+.check span {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+/* DOCTORS */
+
+.doctors {
+    background: #f7fbfc;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.doctor {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #e8eef1;
+}
+
+.doctor img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.doctor-info {
+    padding: 22px;
+}
+
+.doctor-info h3 {
+    color: var(--dark);
+}
+
+.doctor-info p {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* TESTIMONIALS */
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial {
+    padding: 30px;
+    background: #f7fbfc;
+    border-radius: 20px;
+}
+
+.stars {
+    color: #f4b400;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.patient {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+/* APPOINTMENT */
+
+.appointment {
+    background:
+        linear-gradient(120deg, rgba(8,127,140,0.96), rgba(16,42,67,0.94));
+    color: white;
+}
+
+.appointment-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.appointment h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.appointment p {
+    opacity: 0.9;
+}
+
+.form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #d8e1e5;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+.form textarea {
+    height: 110px;
+    resize: none;
+}
+
+.form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #f7fbfc;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-box {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #e8eef1;
+}
+
+.contact-box .icon {
+    margin: 0 auto 15px;
+}
+
+.contact-box h3 {
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.contact-box p {
+    color: var(--text);
+}
+
+/* FOOTER */
+
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    opacity: 0.75;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 27px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-container,
+    .about-grid,
+    .appointment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid,
+    .doctor-grid,
+    .testimonial-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 130px;
+    }
+
+    .hero-card img {
+        height: 280px;
+    }
+
+    .section-title h2,
+    .about-content h2,
+    .appointment h2 {
+        font-size: 34px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Bright<span>Smile</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#contact">Contact</a>
+            <a class="nav-btn" href="#appointment">Book Appointment</a>
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div>
+
+            <div class="badge">
+                ✦ Modern Dental Care
+            </div>
+
+            <h1>
+                Your smile deserves
+                <span>the best care.</span>
+            </h1>
+
+            <p>
+                Comfortable, modern and personalized dental care
+                for you and your entire family. Our experienced team
+                is here to help you smile with confidence.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#appointment" class="btn btn-primary">
+                    Book an Appointment
+                </a>
+
+                <a href="#services" class="btn btn-secondary">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=85"
+            alt="Dental care">
+
+            <div class="card-info">
+
+                <div>
+                    <strong>Trusted Dental Care</strong><br>
+                    Serving families with care
+                </div>
+
+                <div class="rating">
+                    ★ 4.9
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>OUR SERVICES</span>
+
+            <h2>Complete Dental Care</h2>
+
+            <p>
+                From routine checkups to advanced treatments,
+                we provide everything you need for a healthy smile.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="icon">🦷</div>
+
+                <h3>General Dentistry</h3>
+
+                <p>
+                    Comprehensive dental examinations,
+                    cleaning and preventive care.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">✨</div>
+
+                <h3>Cosmetic Dentistry</h3>
+
+                <p>
+                    Teeth whitening and cosmetic treatments
+                    designed to improve your smile.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">😁</div>
+
+                <h3>Teeth Whitening</h3>
+
+                <p>
+                    Professional whitening treatments for
+                    a brighter and more confident smile.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🩺</div>
+
+                <h3>Dental Implants</h3>
+
+                <p>
+                    Modern implant solutions designed to
+                    restore function and appearance.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">👶</div>
+
+                <h3>Children's Dentistry</h3>
+
+                <p>
+                    Gentle and friendly dental care
+                    designed specifically for children.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">🛡️</div>
+
+                <h3>Emergency Care</h3>
+
+                <p>
+                    Prompt dental support for unexpected
+                    pain, injuries and urgent problems.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern dental clinic">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span style="color:#087f8c;font-weight:700;">
+                    ABOUT BRIGHTSMILE
+                </span>
+
+                <h2>
+                    Dentistry focused on you.
+                </h2>
+
+                <p>
+                    At BrightSmile Dental Clinic, we believe
+                    dental care should be comfortable, transparent
+                    and personalized.
+                </p>
+
+                <p>
+                    Our team combines modern technology with
+                    compassionate care to give every patient
+                    a comfortable experience.
+                </p>
+
+                <div class="check">
+                    <span>✓</span> Experienced dental professionals
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Modern treatment technology
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Comfortable patient experience
+                </div>
+
+                <div class="check">
+                    <span>✓</span> Personalized treatment plans
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOCTORS -->
+
+<section class="doctors" id="doctors">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>OUR TEAM</span>
+
+            <h2>Meet Our Dentists</h2>
+
+            <p>
+                Experienced professionals dedicated to your
+                oral health and confidence.
+            </p>
+
+        </div>
+
+
+        <div class="doctor-grid">
+
+            <div class="doctor">
+
+                <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85"
+                alt="Dental doctor">
+
+                <div class="doctor-info">
+
+                    <h3>Dr. Sarah Williams</h3>
+
+                    <p>Cosmetic Dentist</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="doctor">
+
+                <img
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85"
+                alt="Dental doctor">
+
+                <div class="doctor-info">
+
+                    <h3>Dr. James Carter</h3>
+
+                    <p>Implant Specialist</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="doctor">
+
+                <img
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=85"
+                alt="Dental doctor">
+
+                <div class="doctor-info">
+
+                    <h3>Dr. Emily Davis</h3>
+
+                    <p>Family Dentist</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>PATIENT REVIEWS</span>
+
+            <h2>What Our Patients Say</h2>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "The entire experience was excellent.
+                    The team was professional, friendly and
+                    made me feel completely comfortable."
+                </p>
+
+                <div class="patient">
+                    — Michael R.
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "I finally feel confident about my smile.
+                    The staff explained everything clearly
+                    and the treatment was excellent."
+                </p>
+
+                <div class="patient">
+                    — Sophia K.
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "A wonderful clinic with caring doctors.
+                    Booking an appointment was quick and easy."
+                </p>
+
+                <div class="patient">
+                    — Daniel M.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPOINTMENT -->
+
+<section class="appointment" id="appointment">
+
+    <div class="container">
+
+        <div class="appointment-grid">
+
+            <div>
+
+                <h2>
+                    Ready to improve your smile?
+                </h2>
+
+                <p>
+                    Book your consultation today and take
+                    the first step toward a healthier,
+                    more confident smile.
+                </p>
+
+                <br>
+
+                <p>
+                    📞 +1 (555) 123-4567
+                </p>
+
+                <p>
+                    ✉ hello@brightsmileclinic.com
+                </p>
+
+            </div>
+
+
+            <div class="form">
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Email Address">
+
+                <input type="tel" placeholder="Phone Number">
+
+                <select>
+                    <option>Select a Service</option>
+                    <option>General Dentistry</option>
+                    <option>Teeth Whitening</option>
+                    <option>Dental Implants</option>
+                    <option>Cosmetic Dentistry</option>
+                    <option>Emergency Care</option>
+                </select>
+
+                <input type="date">
+
+                <textarea placeholder="Tell us how we can help you"></textarea>
+
+                <button class="btn btn-primary">
+                    Request Appointment
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>GET IN TOUCH</span>
+
+            <h2>We're Here For You</h2>
+
+            <p>
+                Have a question? Contact our team today.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+
+                <div class="icon">📍</div>
+
+                <h3>Our Location</h3>
+
+                <p>
+                    123 Medical Avenue<br>
+                    Downtown City
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <div class="icon">📞</div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    +1 (555) 123-4567
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <div class="icon">✉️</div>
+
+                <h3>Email Us</h3>
+
+                <p>
+                    hello@brightsmileclinic.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 BrightSmile Dental Clinic. All rights reserved.
+    </p>
+
+    <p>
+        Demo website created for portfolio purposes.
+    </p>
+
+</footer>
+
+
+<a class="whatsapp"
+href="https://wa.me/15551234567"
+target="_blank"
+aria-label="WhatsApp">
+    ☎
+</a>
+
+
+</body>
+</html>
